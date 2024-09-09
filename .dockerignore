@@ -1,0 +1,57 @@
+# Ignore version control system directories
+.git
+.gitignore
+.gitattributes
+
+# Ignore development and build files
+node_modules
+npm-debug.log
+yarn-error.log
+*.log
+*.cache
+
+# Ignore environment files
+.env
+.env.*
+!.env.example
+
+# Ignore editor and IDE files
+.idea
+.vscode
+*.swp
+*.swo
+*.sublime-*
+
+# Ignore testing and documentation
+tests
+phpunit.xml
+README.md
+CHANGELOG.md
+LICENSE
+
+# Ignore other unnecessary files
+*.md
+*.yml
+*.yaml
+.editorconfig
+.styleci.yml
+phpstan.neon
+psalm.xml
+
+# Ignore backup files
+*.bak
+*.backup
+
+# Ignore Docker related files (except Dockerfile)
+docker-compose*.yml
+.dockerignore
+
+# Ignore Laravel specific files that are not needed in production
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/logs/*
+bootstrap/cache/*
+
+# Keep .gitkeep files to preserve directory structure
+!.gitkeep
