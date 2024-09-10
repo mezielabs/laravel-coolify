@@ -2,9 +2,7 @@ version: '3.8'
 
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: 'ammezie/laravelcoolify:latest'
     volumes:
       - '.:/var/www/html'
     environment:
@@ -58,10 +56,7 @@ services:
       - mysql
 
   worker:
-    # image: 'ammezie/laravelcoolify:latest'
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: 'ammezie/laravelcoolify:latest'
     command: ["php", "/var/www/html/artisan", "queue:work", "--tries=3"]
     volumes:
       - '.:/var/www/html'
